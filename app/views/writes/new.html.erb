@@ -1,0 +1,32 @@
+<div class="write-new-wrapper" >
+  <div class="container">
+    <header>
+      <div class="header-title-area">
+        <p class="phrase">トコキャン生がトコキャン生に貢献するトコキャン特化型メディア</p>
+        <h1 class="logo">トコCAN!</h1>
+      </div>
+    </header>
+    <div class="plat-form">
+      <h1>編集プラットフォーム</h1>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h1 class="text-center"></h1>
+        <%= form_for @write do |f| %>
+          <div class="form-group">
+            <%= f.label :heading %>
+            <%= f.text_area :heading, class: 'form-control'%>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :small_heading %>
+            <%= f.text_area :small_heading, class: 'form-control' %>
+          </div>
+
+          <%= f.submit '投稿', class: 'btn btn-black btn-block' %>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,196 @@
+h1,h2{
+  font-weight:100;
+}
+
+header{
+
+}
+
+
+.text-center{
+  text-align: center;
+}
+
+
+.container{
+  width:1170px;
+  padding:0 15px;
+  margin:0 auto;
+}
+
+header{
+  height:65px;
+  width:100%;
+  background-color:rgba(34,49,52,0.9);
+  position:fixed;top:0;
+  z-index:10;
+
+  .header-left{
+    float:left;
+    p{
+      color:white;
+    }
+  }
+  .header-right{
+    float:right;
+    color:white;
+  }
+
+}
+
+
+.top-hero-wrapper{
+  width:100vw;
+  height:100vh;
+  background-image:image-url('とこキャンメディア背景.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment:  scroll;
+  background-size:cover;
+  background-color:#464646;
+
+  .top-hero-container{
+    padding-top:30px;
+  }
+  .top-text{
+    margin-top:80px;
+    margin-bottom:30px;
+  }
+  .top-sub-text{
+    margin-bottom:30px;
+  }
+
+  .btn-white{
+    color:#fff;
+    border:1px solid #fff;
+    padding-top:10px;
+    padding-bottom:10px;
+    font-size:20px;
+    background-color:rgba(0,0,0,0.0);
+    margin-top:30px;
+
+     &:hover{
+       color:#fff;
+      }
+     }
+  }
+
+.intro-wrapper{
+  background-image:image-url('101号館.jpg');
+  height:100vh;
+  width:100vw;
+  background-position: center center;
+  background-repeat:no-repeat;
+  background-attachment:scroll;
+  background-size:cover;
+  background-color:#464646;
+
+  .intro-wrapper-container{
+    padding-top:30px;
+  }
+  .intro-title{
+    margin-top:30px;
+  }
+
+  .intro-description{
+    margin:20px 0 30px;
+    font-size:30px;
+  }
+}
+
+
+.about-wrapper{
+  background-image:image-url('とこキャンabout.jpg');
+  weight:100vw;
+  height:100vh;
+  background-position: center center;
+  background-repeat:no-repeat;
+  background-attachment:scroll;
+  background-size:cover;
+  background-color:#464646;
+
+  .about-wrapper-container{
+    padding-top:30px;
+  }
+  .about-title{
+    margin-top:30px;
+  }
+
+}
+
+.detail-wrapper{
+  weight:100vw;
+  height:100vh;
+  background-image:image-url('トコキャンメディアdetail');
+  background-position: center center;
+  background-repeat:no-repeat;
+  background-attachment:scroll;
+  background-size:cover;
+  background-color:#464646;
+}
+
+
+.chushions-wrapper{
+  width: 100vw;
+  height:100vh;
+  background-image: image-url('ログイン・新規登録確認フォーム');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
+  background-color:#464646;
+  .chushions-container {
+  padding-top: 220px;
+  h1 {
+    font-size: 56px;
+    margin-bottom: 20px;
+  }
+ }
+}
+
+
+.user-new-wrapper{
+  width:100vw;
+  height:100vh;
+  background-image:image-url('アカウント登録画面');
+  background-position: center center;
+  background-attachment:no-repeat;
+  background-attachment: fixed;
+  background-size:color;
+  background-color:#464646;
+  .users-new-container{
+    padding-top:220px;
+    }
+    .form-group{
+      margin-bottom:20px;
+    }
+  }
+
+
+
+
+.alert{
+  margin-bottom:0px;
+  position:fixed;
+  width:100px;
+  z-index:10000;
+}
+
+
+
+.btn-black {
+  color: #565656;
+  border: 1px solid #565656;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0.0);
+
+  &:hover {
+    color: #565656;
+  }
+}
+
+.topic-new-wrapper {
+  padding-top: 120px;
+}

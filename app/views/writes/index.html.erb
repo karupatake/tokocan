@@ -1,0 +1,57 @@
+<div class="write-index">
+ <div class="write-head">
+     <div class="container">
+      <div class="header-title-area">
+       <h4>トコキャン生がトコキャン生に貢献するキャンパス特化型メディア</h4>
+       <h1>トコCAN!</h1>
+       <ul class="header-navigation">
+      <li><a href="http://localhost:3000/writes/new">記事編集画面</a></li>
+      <li><%= link_to "アカウントページ",user_path(id: current_user.id) %></li>
+      <li><%= link_to "お気に入りリスト", favorites_path %></li>
+     </div>
+  </div>
+ </div>
+  <div class="article-main">
+   <div class="container">
+    <div class="left-contents">
+      <h2>一覧記事</h2>
+        <% @writes.each do |write| %>
+      <div class="article">
+       <div class="article-img">
+        <%= link_to write_path(id: write.id) do %>
+         <%= image_tag write.image,:width => '130', :height => '170' %>
+        <% end %>
+       </div>
+     <div class="article-content">
+       <div class="date">
+         <p>2017/5/29</p>
+       </div>
+        <h3><%= write.title %></h3><br>
+        <p><%= write.description %></p><br>
+     </div>
+   </div>
+   <% end %>
+  </div>
+     <div class="right-contents">
+       <h2>人気記事</h2>
+         <% @favorite_writes.each do |write| %>
+      <div class="newscript">
+       <div class="new-img">
+         <%= link_to write_path(id: write.id) do %>
+         <%=image_tag write.image,:width => '60', :height => '70'%>
+         <% end %>
+       </div>
+       <div class="new-list">
+         <p>2017/05/09</p>
+         <%= write.title %>
+       </div>
+       </div>
+      <% end %>
+
+    </div>
+  </div>
+ </div>
+ <div class="pagination">
+ <%= paginate @writes %>
+</div>
+</div>

@@ -1,0 +1,25 @@
+<div class="write-favorite-wrapper">
+  <div class="container">
+    <div class="center-contents">
+      <h2>お気に入り記事一覧</h2>
+      <% @favorite_writes.each do |write| %>
+      <div class="article">
+    <div class="col-md-5 col-md-offset-4 ">
+       <div class="article-img">
+        <%= link_to write_path(id: write.id) do %>
+         <%= image_tag write.image,:width => '130', :height => '170' %>
+        <% end %>
+       </div>
+     <div class="article-content">
+       <div class="date">
+         <p>2017/5/29</p>
+       </div>
+        <h3><%= write.title %></h3><br>
+        <p><%= write.description %></p><br>
+     </div>
+   </div>
+   </div>
+   <% end %>
+  </div>
+ </div>
+</div>

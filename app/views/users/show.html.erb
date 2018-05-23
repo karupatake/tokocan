@@ -1,0 +1,44 @@
+<div class="account-show-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="back-home">
+      　　<%= link_to "記事一覧に戻る", writes_path,class:'btn btn-show-black' %>
+        </div>
+        <div class="account-intro">
+        <div class="account-img">
+          <% if @user.image %>
+           <%=image_tag @user.image.url, :width => '400', :height => '220'%><br>
+          <% else %>
+           <%= image_tag "default.jpeg" %><br>
+           <% end %>
+        </div>
+        <p>アカウント名：<%= @user.name %></p><br>
+        <p>アカウントURL：<%= @user.account %></p><br>
+        <div class="account-discription">
+          <p><%= @user.contents %></p><br>
+        </div>
+       </div>
+      </div>
+      <div class="col-md-6">
+       <div class="myarticle-index">
+         <%= link_to "プロフィール変更", edit_user_path(id: current_user.id),class:'btn btn-block btn-show-black' %>
+        <h1 class="myarticle">マイ記事</h1>
+        <% @user_writes.each do |write| %>
+        <div class="account-article">
+          <div class="new-img">
+            <%= link_to write_path(id: write.id) do %>
+            <%=image_tag write.image,:width => '60', :height => '70'%>
+            <% end %>
+          </div>
+          <div class="new-list">
+            <p>2017/05/09</p>
+            <h3><%= write.title %></h3>
+          </div>
+        </div>
+        <% end %>
+      </div>
+     </div>
+    </div>
+  </div>
+</div>

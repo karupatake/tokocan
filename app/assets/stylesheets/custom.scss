@@ -1,12 +1,96 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/*  HTML5 display-role reset for older browsers
+*/
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+
 h1,h2{
   font-weight:100;
 }
 
-header{
+.form-group{
+  margin-bottom:30px;
+}
 
+.btn-white{
+  color:#fff;
+  border:3px solid #fff;
+  padding-top:10px;
+  padding-bottom:10px;
+  font-size:15px;
+  background-color:rgba(0,0,0,0.0);
+  margin-top:10px;
+
+   &:hover{
+     color:#fff;
+  }
 }
 
 
+
+
+.btn-show-black{
+  color:black;
+  border:3px solid black;
+  padding-top:10px 0;
+  font-size:15px;
+  background-color:rgba(0,0,0,0.0);
+  margin-bottom:10px;
+
+  &:hover{
+    color:black;
+  }
+}
+
+.show-title{
+  font-weight: bold;
+}
 .text-center{
   text-align: center;
 }
@@ -18,31 +102,209 @@ header{
   margin:0 auto;
 }
 
-header{
+.head{
   height:65px;
   width:100%;
-  background-color:rgba(34,49,52,0.9);
-  position:fixed;top:0;
-  z-index:10;
+  background-color:rgba(0,0,0,0);
 
   .header-left{
+    padding-top:8px;
     float:left;
     p{
-      color:white;
+      color:lime;
+      font-size:50px;
     }
   }
   .header-right{
     float:right;
-    color:white;
+    padding-right:80px;
+    p{
+      font-size:20px;
+      color:white;
+      float:right;
+      margin-right:10px;
+      padding-top:15px;
+    }
   }
 
+}
+
+.write-head{
+  background-color:#EEEEEE;
+  background-clip:content-box;
+.header-title-area{
+  margin-top:30px;
+  margin-bottom:30px;
+  h4{
+    text-align: left;
+    margin-bottom:25px;
+  }
+  h1{
+    text-align:left;
+    color:lime;
+    font-weight:bold;
+    margin-bottom:40px;
+  }
+  .header-navigation{
+  width:100%;
+  background-color:#0f0;
+  padding:20px 0;
+  margin-top:5px;
+  .header-navigation:after{
+  clear:both;
+  display:block;
+}
+  li{
+  float:left;
+  padding:0 30px;
+  text-align:center;
+  list-style-type:none;
+   }
+   li a{
+  color:white;
+  text-decoration:none;
+   }
+ }
+ }
+
+}
+
+
+.article-index{
+  h1{
+    text-align:center;
+    padding-bottom:30px;
+  }
+}
+
+.pagination{
+  padding-bottom:30px;
+  margin-left:280px;
+}
+
+.write-index{
+  background-color:#EEEEEE;
+  background-clip:padding-box;
+}
+
+
+.article-main{
+  background-color:#EEEEEE;
+  padding-bottom:110px;
+  .left-contents{
+    background-color:#fff;
+    background-clip:content-box;
+    float:left;
+    margin-right:40px;
+    width:600px;
+    border:solid 1px #0f0;
+    h2{
+      border-bottom:solid 1px #0f0;
+      padding:15px 0;
+    }
+  .article{
+    width:100%;
+    height:220px;
+    padding:10px 20px;
+    border-bottom:solid 1px #0f0;
+    float:left;
+    display:block;
+    .article-img{
+      display:block;
+      float:left;
+     }
+  .article-content{
+    float:left;
+    width:400px;
+    padding-left:20px;
+    .date{
+      p{
+        padding-top:1px;
+      }
+    }
+    h3{
+      padding-top:20px;
+    }
+    p{
+      padding-top:20px;
+      font-size:15px;
+    }
+  }
+  }
+}
+  .right-contents{
+    background-color:#fff;
+    background-clip:content-box;
+    width:300px;
+    float:left;
+    margin-left:50px;
+    border:solid 1px #0f0;
+    h2{
+      border-bottom:solid 1px #0f0;
+      padding:15px 0;
+    }
+    .newscript{
+      width:100%;
+      height:120px;
+      // float:left;
+      border-bottom:solid 1px #0f0;
+      padding-bottom:10px;
+    .new-img{
+      padding-top:20px;
+      display:block;
+      padding-left:20px;
+      float: left;
+    }
+    .new-list{
+      // width:240px;
+      display:inline-block;
+      padding-top:20px;
+      padding-left:20px;
+      float: left;
+    }
+  }
+ }
+}
+
+
+.users-new-wrapper{
+  background-image:image-url('2.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-bottom:80px;
+  h1{
+    margin-top:110px;
+    margin-bottom:60px;
+    font-weight:bold;
+    color:#0f0;
+    font-size:50px;
+  }
+  p{
+    margin-bottom:10px;
+  }
+  .password_confirmation{
+    margin-top:20px;
+  }
+  .text-green{
+    color: #0f0;
+  }
+  .text-white{
+    color:#fff;
+  }
+  .btn-green{
+    padding:15px 0;
+    color:#fff;
+    background-color:#0f0;
+    margin-top:50px;
+  }
 }
 
 
 .top-hero-wrapper{
   width:100vw;
   height:100vh;
-  background-image:image-url('とこキャンメディア背景.jpg');
+  background-image:image-url('d.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment:  scroll;
@@ -50,33 +312,30 @@ header{
   background-color:#464646;
 
   .top-hero-container{
-    padding-top:30px;
+    margin-top:0;
   }
   .top-text{
-    margin-top:80px;
+    margin-top:250px;
     margin-bottom:30px;
+    font-size:80px;
+    color:white;
+    text-align:center;
   }
   .top-sub-text{
+    color:white;
+    margin-top:50px;
     margin-bottom:30px;
   }
-
-  .btn-white{
-    color:#fff;
-    border:1px solid #fff;
-    padding-top:10px;
-    padding-bottom:10px;
-    font-size:20px;
-    background-color:rgba(0,0,0,0.0);
-    margin-top:30px;
-
-     &:hover{
-       color:#fff;
-      }
-     }
+  .btn-block{
+    background-color:#0f0;
+  }
+  }
+  .top-botton{
+    padding-left:350px;
   }
 
 .intro-wrapper{
-  background-image:image-url('101号館.jpg');
+  background-image:image-url('a.jpg');
   height:100vh;
   width:100vw;
   background-position: center center;
@@ -89,18 +348,21 @@ header{
     padding-top:30px;
   }
   .intro-title{
-    margin-top:30px;
+    margin-top:50px;
+    font-size:70px;
+    font-weight:bold;
   }
 
   .intro-description{
-    margin:20px 0 30px;
+    margin:60px 0 30px;
     font-size:30px;
+    color:white;
   }
 }
 
 
 .about-wrapper{
-  background-image:image-url('とこキャンabout.jpg');
+  background-image:image-url('c.jpg');
   weight:100vw;
   height:100vh;
   background-position: center center;
@@ -108,12 +370,31 @@ header{
   background-attachment:scroll;
   background-size:cover;
   background-color:#464646;
-
+  p{
+    font-size:35px;
+    font-weight:bold;
+    color:white;
+    margin-top:20px;
+  }
   .about-wrapper-container{
     padding-top:30px;
   }
   .about-title{
     margin-top:30px;
+    font-size:70px;
+    font-weight:bold;
+  }
+  .about-text{
+    padding-top:30px;
+    margin-left:190px;
+    font-weight:bold;
+    font-size:30px;
+  }
+  .about-catch{
+    color:green;
+    h2{
+      font-size:40px;
+    }
   }
 
 }
@@ -121,19 +402,51 @@ header{
 .detail-wrapper{
   weight:100vw;
   height:100vh;
-  background-image:image-url('トコキャンメディアdetail');
+  background-image:image-url('b.jpg');
   background-position: center center;
   background-repeat:no-repeat;
   background-attachment:scroll;
   background-size:cover;
   background-color:#464646;
+  .detail-title{
+    font-size:70px;
+    margin-top:50px;
+    font-weight:bold;
+  }
+  .detail-line{
+    padding-top:50px;
+    font-weight:bold;
+    font-size:50px;
+  }
+  .token{
+    p{
+      font-size:30px;
+      font-weight:bold;
+    }
+  }
+  .detail-description1{
+    color:white;
+    font-weight:bold;
+  }
+  .detail-eva1{
+    color:white;
+    font-size:25px;
+  }
+  .detail-eva2{
+    color:white;
+    font-size:25px;
+  }
+  .detail-description2{
+    color:white;
+    font-weight:bold;
+  }
 }
 
 
 .chushions-wrapper{
   width: 100vw;
   height:100vh;
-  background-image: image-url('ログイン・新規登録確認フォーム');
+  background-image: image-url('e.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -142,27 +455,35 @@ header{
   .chushions-container {
   padding-top: 220px;
   h1 {
-    font-size: 56px;
+    font-size: 60px;
     margin-bottom: 20px;
+    color:white;
+    font-weight:bold;
   }
+ }
+ .chushions-choice{
+   margin-top:130px;
  }
 }
 
 
-.user-new-wrapper{
+.sessions-new-wrapper{
   width:100vw;
   height:100vh;
-  background-image:image-url('アカウント登録画面');
+  background-image:image-url('q.jpg');
   background-position: center center;
   background-attachment:no-repeat;
   background-attachment: fixed;
-  background-size:color;
+  background-size:cover;
   background-color:#464646;
-  .users-new-container{
+  .sessions-new-container{
     padding-top:220px;
     }
     .form-group{
       margin-bottom:20px;
+    }
+    h1{
+      color:white;
     }
   }
 
@@ -172,7 +493,7 @@ header{
 .alert{
   margin-bottom:0px;
   position:fixed;
-  width:100px;
+  width:250px;
   z-index:10000;
 }
 
@@ -181,8 +502,7 @@ header{
 .btn-black {
   color: #565656;
   border: 1px solid #565656;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding:10px;
   font-size: 20px;
   background-color: rgba(0,0,0,0.0);
 
@@ -193,4 +513,215 @@ header{
 
 .topic-new-wrapper {
   padding-top: 120px;
+}
+
+.navbar-transparent{
+  // margin-bottom:10px;
+  background-color:rgba(0,0,0,0.0);
+  a{
+    color:#fff !important;
+  }
+
+.navbar-brand{
+  padding:0px;
+  margin-top:15px;
+}
+  img{
+    height: 40px;
+  }
+}
+
+
+.account-show-wrapper{
+  .account-intro{
+    width:400px;
+    p{
+      margin-top:30px;
+      margin-left:60px;
+    }
+  .account-img{
+    margin-top:25px;
+    margin-left:50px;
+  }
+  .account-discription{
+    width:100%;
+    text-align:left;
+    margin-top:40px;
+  }
+}
+ .back-home{
+   margin-top:75px;
+ }
+ .myarticle-index{
+   margin-left:80px;
+   margin-top:150px;
+   h1{
+     font-size:40px;
+     margin-bottom:15px;
+   }
+   .account-article{
+     height:80px;
+     .new-img{
+       float:left;
+     }
+     .new-list{
+       float:left;
+       padding-left:15px;
+       h3{
+         font-weight:bolder;
+         padding-top:10px;
+       }
+     }
+   }
+ }
+}
+
+.article-show-main{
+  background-color:#EEEEEE;
+  background-clip:padding-box;
+  padding-bottom:120px;
+  .show-left-contents{
+    background-color:#fff;
+    background-clip:content-box;
+    float:left;
+    margin-right:40px;
+    width:600px;
+    border:solid 1px #0f0;
+    h1{
+      padding:15px 10px;
+      font-size:30px;
+      border-bottom:solid 3px black;
+    }
+    h2{
+      padding:25px 10px 15px;
+      font-size:25px;
+      font-weight:bold;
+      border-bottom:solid 1px black;
+    }
+    h4{
+      margin-top:10px;
+      padding:25px 10px 20px;
+      border:solid 1px thistle;
+
+    }
+    h3{
+      padding:15px 10px;
+      font-size:20px;
+      font-weight:bolder;
+    }
+    p{
+      padding:15px 10px;
+    }
+  }
+  .show-right-contents{
+    background-color:#fff;
+    background-clip:content-box;
+    width:300px;
+    float:left;
+    margin-left:50px;
+    border:solid 1px #0f0;
+    h2{
+      border-bottom:solid 1px #0f0;
+      padding:15px 0;
+    }
+    .newscript{
+      width:100%;
+      height:120px;
+      // float:left;
+      border-bottom:solid 1px #0f0;
+      padding-bottom:10px;
+    .new-img{
+      padding-top:20px;
+      display:block;
+      padding-left:20px;
+      float: left;
+    }
+    .new-list{
+      // width:240px;
+      display:inline-block;
+      padding-top:20px;
+      padding-left:20px;
+      float: left;
+    }
+  }
+  }
+  .btn-write-back{
+    margin-left:55px;
+    margin-top:30px;
+    padding:15px 30px;
+  }
+}
+
+
+.users-edit-wrapper{
+  background-image:image-url('R.jpg');
+  background-size:cover;
+  padding-top:80px;
+  padding-bottom:45px;
+  h1{
+    margin-bottom:40px;
+    font-weight:bold;
+    font-size:35px;
+  }
+  .btn-edit-black{
+    color: #565656;
+    border: 1px solid #565656;
+    padding:10px;
+    margin-top:40px;
+    font-size: 20px;
+    background-color: rgba(0,0,0,0.0);
+
+    &:hover {
+      color: #565656;
+    }
+  }
+}
+.write-new-wrapper{
+  margin-top:10px;
+  .phrase{
+    padding:5px 0 10px;
+    color:#000;
+  }
+  .logo{
+    color:#0f0;
+  }
+  .plat-form{
+    text-align:center;
+    margin:40px 0;
+    font-weight:bold;
+    font-size:30px;
+    color:#0f0;
+  }
+  .form-group{
+    p{
+      padding-bottom:7px;
+    }
+  }
+}
+
+.write-favorite-wrapper{
+  width:800px;
+  margin-top: 90px;
+  .center-contents{
+    width:100%;
+    height:220px;
+    padding:10px 20px;
+    h2{
+      text-align:center;
+      font-weight:bolder;
+      color:#0f0;
+      font-size:50px;
+      margin-bottom:50px;
+    }
+    .article{
+      .article-img{
+        float:left;
+        margin-right:15px;
+        margin-bottom:30px;
+      }
+      .article-contents{
+        float:left;
+      }
+    }
+  }
 }

@@ -1,0 +1,46 @@
+<div class="write-head">
+     <div class="container">
+      <div class="header-title-area">
+       <h3>トコキャン生がトコキャン生に貢献するキャンパス特化型メディア</h3>
+       <h1>トコCAN!</h1>
+     </div>
+  </div>
+</div>
+  <div class="article-show-main">
+   <div class="container">
+    <div class="show-left-contents">
+     <div class="article">
+     <div class="article-content">
+       <h1 class="show-title"><%= @write.title %><br></h1>
+       <h4><%= @write.description %></h4><br>
+       <%=image_tag @write.image.url,:width => '400', :height => '220'%><br>
+       <h2><%= @write.heading %></h2><br>
+       <h3><%= @write.small_heading %></h3><br>
+       <p><%= @write.content %></p><br>
+       <%= link_to favorites_path(write_id: @write.id), method: :post do %>
+         <%= image_tag 'favorite.png', :width => '130',:height => '150',class: 'write-index-icon' %>
+       <% end %>
+     </div>
+   </div>
+  </div>
+     <div class="show-right-contents">
+       <h2>新着記事</h2>
+       <% @write_new.each do |write| %>
+       <div class="newscript">
+       <div class="new-img">
+         <%= link_to write_path(id: write.id) do %>
+         <%= image_tag write.image,:width => '60', :height => '60'%>
+         <% end %>
+       </div>
+       <div class="new-list">
+         <p>2017/05/09</p>
+         <%= write.title %>
+       </div>
+     </div>
+     <% end %>
+    </div>
+    <div class="write-back-home">
+  　　<%= link_to "記事一覧に戻る", writes_path,class:'btn btn-show-black btn-write-back' %>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,12 @@
 class Write < ApplicationRecord
-  validates :heading, presence: true,length:{in: 28..36}
-  validates :small_heading, presence: true{in: 10..20}
+  mount_uploader :image, ImageUploader
+  validates :heading, presence: true
+  validates :small_heading, presence: true
   validates :content, presence: true
+  validates :title, presence: true
+  validates :description, presence: true
 
-  mount_uploader :image, ImageUploder
+  belongs_to :user
+  has_many :favorites
+  has_many :favorite_users, through: :favorites, source: 'user'
 end

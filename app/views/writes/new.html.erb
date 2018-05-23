@@ -11,16 +11,35 @@
     </div>
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
-        <h1 class="text-center"></h1>
         <%= form_for @write do |f| %>
+         <div class="form-group">
+           <p><%=f.label :タイトル %></p>
+           <%= f.text_area :title, :size=>"10x1",class: 'form-control' %>
+         </div>
+
+         <div class="form-group">
+           <p><%=f.label :記事紹介 %></p>
+           <%=f.text_area :description,:size=>"15x5", class: 'form-control' %>
+         </div>
+
           <div class="form-group">
-            <%= f.label :heading %>
-            <%= f.text_area :heading, class: 'form-control'%>
+            <p><%= f.label :見出し %></p>
+            <%= f.text_area :heading, :size=>"10x1",class: 'form-control' %>
           </div>
 
           <div class="form-group">
-            <%= f.label :small_heading %>
-            <%= f.text_area :small_heading, class: 'form-control' %>
+            <p><%= f.label :小見出し %></p>
+            <%= f.text_area :small_heading,:size=>"10x1", class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <p><%= f.label :テキスト %></p>
+            <%= f.text_area :content,:size=>"60x10", class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <p><%= f.label :画像 %></p>
+            <%= f.file_field :image %>
           </div>
 
           <%= f.submit '投稿', class: 'btn btn-black btn-block' %>

@@ -36,6 +36,7 @@ gem 'ffi', '1.9.18'
 # gem 'capistrano-rails', group: :development
 gem 'bootstrap-sass'
 gem "carrierwave"
+gem 'kaminari'
 
 
 group :development, :test do
